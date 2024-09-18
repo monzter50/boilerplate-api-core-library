@@ -24,6 +24,20 @@ export type OptionsProps = {
   url: string;
 };
 
+// Function to check if the code is running on the server
+function isServer(): boolean {
+    return typeof window === 'undefined';
+}
+
+// Function to check if the code is running on the client
+function isClient(): boolean {
+    return typeof window !== 'undefined';
+}
+
+// Function to check if the code is running on the browser if is true return fetch else return fecth for server
+function getFetch(): typeof fetch {
+    return isClient() ? fetch : require('node-fetch');
+}
 
 function settings({
 method = 'GET',
@@ -42,114 +56,82 @@ method = 'GET',
     if (method === 'POST' || method === 'DELETE' || method === 'PATCH') {
         options.body = body instanceof FormData ? body : JSON.stringify(body);
     }
-  return fetch(uri, options);
+    return getFetch()(uri, options);
 }
 
 
 
 export function apiFactory() {
-  return {
-    post: (args: OptionsProps) => new Promise(function (resolve, reject) {
-        settings({
-            method: 'POST',
-            url: args.url,
-            body:args.body ,
-            headers: { "Content-Type": args.contentType },
-            mode: args?.mode
-        })
-            .then((response) => {
-              if (response.status !== 200 && response.status !== 201) {
-                return reject({
-                  defaultErr :args?.defaultErr ?? "Something went wrong post the data",
-                  status: response.status
+    return {
+        post: async (args: OptionsProps) => {
+            try {
+                const response = await settings({
+                    method: 'POST',
+                    url: args.url,
+                    body: args.body,
+                    headers: { "Content-Type": args.contentType },
+                    mode: args?.mode
                 });
-              }
-              return response.json();
-            })
-            .then(result => {
-                resolve({
-                    response: result,
-                    status: "ok"
+                if (response.status !== 200 && response.status !== 201) {
+                    throw new Error(args?.defaultErr ?? "Something went wrong posting the data");
+                }
+                const result = await response.json();
+                return { response: result, status: "ok" };
+            } catch (error) {
+                return { response: error, status: "error" };
+            }
+        },
+        get: async (args: OptionsProps) => {
+            try {
+                const response = await settings({
+                    method: 'GET',
+                    url: args.url,
+                    headers: { "Content-Type": args.contentType },
+                    mode: args?.mode,
                 });
-        }).catch((error) => {
-            return reject({response:error, status: "error"});
-        });
-    }),
-    get: (args: OptionsProps) => new Promise(function (resolve, reject) {
-        settings({
-            method: 'GET',
-            url: args.url ,
-            headers: { "Content-Type": args.contentType },
-            mode: args?.mode,
-        })
-            .then((response) => {
-              if (response.status !== 200 && response.status !== 201) {
-                return reject({
-                  defaultErr :args?.defaultErr ?? "Something went wrong getting the data",
-                  status: response.status
+                if (response.status !== 200 && response.status !== 201) {
+                    throw new Error(args?.defaultErr ?? "Something went wrong getting the data");
+                }
+                const result = await response.json();
+                return { response: result, status: "ok" };
+            } catch (error) {
+                return { response: error, status: "error" };
+            }
+        },
+        delete: async (args: OptionsProps) => {
+            try {
+                const response = await settings({
+                    method: 'DELETE',
+                    url: args.url,
+                    headers: { "Content-Type": args.contentType },
+                    mode: args?.mode,
                 });
-              }
-              return response.json();
-            })
-            .then(result => {
-                resolve({
-                    response: result,
-                    status: "ok"
+                if (response.status !== 200 && response.status !== 201) {
+                    throw new Error("Something went wrong deleting the data");
+                }
+                const result = await response.json();
+                return { response: result, status: "ok" };
+            } catch (error) {
+                return { response: error, status: "error" };
+            }
+        },
+        patch: async (args: OptionsProps) => {
+            try {
+                const response = await settings({
+                    method: 'PATCH',
+                    url: args.url,
+                    headers: { "Content-Type": args.contentType },
+                    mode: args?.mode,
+                    body: args.body
                 });
-        }).catch((error) => {
-            return reject({response:error, status: "error"});
-        });
-    }) ,
-    delete: (args: OptionsProps) =>new  Promise(function (resolve, reject) {
-        settings({
-            method: 'DELETE',
-            url: args.url,
-            headers: { "Content-Type": args.contentType },
-            mode: args?.mode,
-        })
-            .then((response) => {
-              if (response.status !== 200 && response.status !== 201) {
-                return reject({
-                  defaultErr :"Something went wrong deleting the data",
-                  status: response.status
-                });
-              }
-              return response.json();
-            })
-            .then(result => {
-                resolve({
-                    response: result,
-                    status: "ok"
-                });
-        }).catch((error) => {
-            return reject({response:error, status: "error"});
-        });
-    }),
-    patch: (args: OptionsProps) => new Promise(function (resolve, reject) {
-        settings({
-            method: 'PATCH',
-            url: args.url,
-            headers: { "Content-Type": args.contentType },
-            mode: args?.mode,
-            body: args.body
-        })
-            .then((response) => {
-              if (response.status !== 200 && response.status !== 201) {
-                return reject({
-                  defaultErr :"Something went wrong patching the data",
-                  status: response.status
-                });
-              }
-              return response.json();
-            })
-            .then(result => {
-                resolve({
-                    response: result,
-                    status: "ok"
-                });
-        }).catch((error) => {
-            return reject({response:error, status: "error"});
-        });
-    }),
-  }
+                if (response.status !== 200 && response.status !== 201) {
+                    throw new Error("Something went wrong patching the data");
+                }
+                const result = await response.json();
+                return { response: result, status: "ok" };
+            } catch (error) {
+                return { response: error, status: "error" };
+            }
+        },
+    }
 }
