@@ -1,1 +1,1 @@
-export * from './apiCore';
+export * from './client';

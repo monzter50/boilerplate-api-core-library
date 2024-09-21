@@ -2,11 +2,21 @@
   "name": "boilerplate-api-core-library",
   "version": "1.0.0",
   "description": "Only i want practices and understand how create first library for implement my other projects <3",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "dist/client/index.js",
+  "module": "dist/client/index.mjs",
+  "types": "dist/client/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/client/index.mjs",
+      "require": "./dist/client/index.js"
+    },
+    "./server": {
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup src/client/index.ts src/server/index.ts --format cjs,esm --dts",
     "test": "jest",
     "release": "yarn run build && changeset publish"
   },

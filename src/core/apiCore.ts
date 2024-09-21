@@ -1,71 +1,12 @@
-export type Primitive = number | string | boolean | null | undefined;
-export type JSONObject = { [k: string]: JSONTypes };
-export type JSONArray = JSONTypes[];
-export type JSONTypes = JSONArray | JSONObject | Primitive;
-
-export type Method = "GET" | "POST" | "DELETE" | "PATCH";
-export type RequestMode = "cors" | "navigate" | "no-cors" | "same-origin"
-export interface BaseFetch {
-  method?: Method;
-  params?: any;
-  url: string;
-  headers?: {
-    "Content-Type": string;
-  };
-  mode?: RequestMode;
-  body?: FormData | JSONTypes;
-}
-
-export type OptionsProps = {
-  contentType: string | "";
-  mode?: RequestMode;
-  body?: FormData | JSONTypes;
-  defaultErr?: string;
-  url: string;
-};
-
-// Function to check if the code is running on the server
-function isServer(): boolean {
-    return typeof window === 'undefined';
-}
-
 // Function to check if the code is running on the client
-function isClient(): boolean {
-    return typeof window !== 'undefined';
-}
-
-// Function to check if the code is running on the browser if is true return fetch else return fecth for server
-function getFetch(): typeof fetch {
-    return isClient() ? fetch : require('node-fetch');
-}
-
-function settings({
-method = 'GET',
-    headers =  { "Content-Type": "application/json" },
-    body = {},
-...args
-}:BaseFetch) {
-  const uri = args?.url ?? "https://jsonplaceholder.typicode.com/posts";
-    const options: RequestInit = {
-        method: method ?? 'GET',
-        headers: {
-            ...headers,
-        },
-    };
-
-    if (method === 'POST' || method === 'DELETE' || method === 'PATCH') {
-        options.body = body instanceof FormData ? body : JSON.stringify(body);
-    }
-    return getFetch()(uri, options);
-}
-
-
-
-export function apiFactory() {
+import {OptionsProps} from "./types";
+import {settings} from "./settings";
+import {FetchProvider} from "./types";
+export function apiFactory(fetchProvider: FetchProvider) {
     return {
         post: async (args: OptionsProps) => {
             try {
-                const response = await settings({
+                const response = await settings(fetchProvider,{
                     method: 'POST',
                     url: args.url,
                     body: args.body,
@@ -83,7 +24,7 @@ export function apiFactory() {
         },
         get: async (args: OptionsProps) => {
             try {
-                const response = await settings({
+                const response = await settings(fetchProvider,{
                     method: 'GET',
                     url: args.url,
                     headers: { "Content-Type": args.contentType },
@@ -100,7 +41,7 @@ export function apiFactory() {
         },
         delete: async (args: OptionsProps) => {
             try {
-                const response = await settings({
+                const response = await settings(fetchProvider,{
                     method: 'DELETE',
                     url: args.url,
                     headers: { "Content-Type": args.contentType },
@@ -117,7 +58,7 @@ export function apiFactory() {
         },
         patch: async (args: OptionsProps) => {
             try {
-                const response = await settings({
+                const response = await settings(fetchProvider,{
                     method: 'PATCH',
                     url: args.url,
                     headers: { "Content-Type": args.contentType },
