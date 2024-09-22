@@ -20,8 +20,18 @@
     "test": "jest",
     "release": "yarn run build && changeset publish"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Monster Codes",
+  "keywords": [
+    "api",
+    "fetch",
+    "library",
+    "typescript"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monzter50/boilerplate-api-core-library.git"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",
     "@types/jest": "^29.5.13",
