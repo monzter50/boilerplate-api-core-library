@@ -7,5 +7,9 @@ module.exports = {
   verbose: true,
   transform: {
     '^.+.tsx?$': ['ts-jest', {}]
-  }
+  },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  setupFiles:['<rootDir>/setUpTests.ts'],
 }

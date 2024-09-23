@@ -1,4 +1,4 @@
-import { FetchProvider } from '../core';
+import { FetchProvider } from '@/core';
 import fetch, { RequestInfo as NodeRequestInfo, RequestInit as NodeRequestInit, Response as NodeResponse } from 'node-fetch';
 
 export class NodeFetchProvider implements FetchProvider {
