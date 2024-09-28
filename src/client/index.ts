@@ -1,4 +1,4 @@
-import { apiFactory } from '@/core';
-import { DomFetchProvider } from './DomFetchProvider';
+import { apiFactory } from "@/core";
+import { DomFetchProvider } from "./DomFetchProvider";
 export const api = apiFactory(new DomFetchProvider());
-export * from '@/core/types';
+export * from "@/core/types";

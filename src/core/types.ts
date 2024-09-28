@@ -7,7 +7,7 @@ export type Method = "GET" | "POST" | "DELETE" | "PATCH";
 export type RequestMode = "cors" | "navigate" | "no-cors" | "same-origin"
 export interface BaseFetch {
     method?: Method;
-    params?: any;
+    params?: unknown;
     url: string;
     headers?: {
         "Content-Type": string;
@@ -25,5 +25,6 @@ export type OptionsProps = {
 };
 
 export interface FetchProvider {
+    // eslint-disable-next-line no-unused-vars
     fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
 }

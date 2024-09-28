@@ -1,5 +1,5 @@
-import { apiFactory } from '@/core';
-import { NodeFetchProvider } from './NodeFecthProvider';
+import { apiFactory } from "@/core";
+import { NodeFetchProvider } from "./NodeFecthProvider";
 
 export const nodeApi = apiFactory(new NodeFetchProvider());
-export * from '@/core/types';
+export * from "@/core/types";
