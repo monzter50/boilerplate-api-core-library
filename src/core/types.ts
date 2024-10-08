@@ -28,3 +28,8 @@ export interface FetchProvider {
     // eslint-disable-next-line no-unused-vars
     fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
 }
+
+export interface ApiResponse<T> {
+    response: T;
+    status: "ok" | "error";
+}
