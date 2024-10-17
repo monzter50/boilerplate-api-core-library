@@ -1,4 +1,4 @@
-import { api } from "@/client";
+import { api, FetchProvider } from "@/client";
 jest.mock("@/client", () => ({
     api: {
         post: jest.fn(()=>Promise.resolve(mocResponsePost)),
@@ -7,7 +7,9 @@ jest.mock("@/client", () => ({
     }
 }));
 export const mockApi = api as jest.Mocked<typeof api>;
-
+export const mockFetchProvider: FetchProvider = {
+    fetch: jest.fn(),
+};
 export const mockResponse = {
     response: {
         title: "foo",
