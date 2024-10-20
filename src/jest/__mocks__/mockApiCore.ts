@@ -1,6 +1,5 @@
 import { settings } from "@/core";
 
-jest.mock("@/core/settings");
 export const mockResponse = {
     response: {
         id: 1,

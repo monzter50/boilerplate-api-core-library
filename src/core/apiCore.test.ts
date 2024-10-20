@@ -1,15 +1,14 @@
 import { apiFactory } from "./apiCore";
 import {
-    mockApi,
     mockFetchProvider,
     mockResponse,
     mockSettings,
     mocResponseDelete,
     mocResponsePost
 } from "@/jest/__mocks__/mockApiCore";
-import { settings } from "./settings";
+import { settings } from "@/core";
 import { ApiError } from "@/errors/ApiError";
-jest.mock("./settings");
+jest.mock("@/core/settings");
 
 describe("apiCore Client", () => {
     let api: ReturnType<typeof apiFactory>;

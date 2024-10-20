@@ -1,5 +1,5 @@
 import { ApiResponse, OptionsProps, FetchProvider } from "./types";
-import { settings } from "./settings";
+import { settings } from "@/core/settings";
 import { ApiError } from "@/errors/ApiError";
 export function apiFactory(fetchProvider: FetchProvider) {
     return {
