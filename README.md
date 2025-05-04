@@ -9,9 +9,10 @@ Welcome to the `@monster-codes/boilerplate-api-core-library`! This library provi
 3. [Project Structure](#project-structure)
 4. [Making Changes](#making-changes)
 5. [Testing](#testing)
-6. [Submitting a Pull Request](#submitting-a-pull-request)
-7. [Code Style](#code-style)
-8. [Reporting Issues](#reporting-issues)
+6. [Running Examples](#running-examples)
+7. [Submitting a Pull Request](#submitting-a-pull-request)
+8. [Code Style](#code-style)
+9. [Reporting Issues](#reporting-issues)
 
 ## Getting Started
 
@@ -86,6 +87,36 @@ We use Jest for testing. Please ensure that all new features or bug fixes are co
 ```bash
 yarn test
 ```
+
+## Running Examples
+
+This project includes example implementations for both server-side (Node.js) and client-side (web browser) usage of the library.
+
+### Server Example
+
+To run the server-side example (demonstrates using `nodeApi`):
+
+```bash
+yarn example:server
+```
+
+**Note:** This example uses a placeholder URL (`http://internal-service.local`). You will likely see an `ENOTFOUND` error. To make it work, you'll need to modify `examples/server/server-example.ts` to point to a valid API endpoint.
+
+### Client Web Example
+
+To run the client-side web example (demonstrates using `api` in a browser):
+
+1.  **Build the example script:** This bundles the example TypeScript code into a JavaScript file the browser can understand.
+    ```bash
+    yarn example:client:build
+    ```
+
+2.  **Serve the example:** This starts a local web server and opens the `index.html` page in your default browser.
+    ```bash
+    yarn example:client:serve
+    ```
+
+    Once the page loads, click the "Fetch Sample Data" button to see the client library interact with the JSONPlaceholder test API.
 
 ## Submitting a Pull Request
 
