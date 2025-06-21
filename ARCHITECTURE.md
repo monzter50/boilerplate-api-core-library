@@ -32,5 +32,3 @@ flowchart TD
 
 **You can view your full source structure here:**  
 [monzter50/boilerplate-api-core-library/src/](https://github.com/monzter50/boilerplate-api-core-library/tree/main/src/)
-
-Would you like a more detailed diagram with data flow, dependencies, or an explanation of key modules? If so, please specify which files or logic you want to focus on!
