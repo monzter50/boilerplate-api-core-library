@@ -5,7 +5,17 @@ export type JSONTypes = JSONArray | JSONObject | Primitive;
 
 export type Method = "GET" | "POST" | "DELETE" | "PATCH";
 export type RequestMode = "cors" | "navigate" | "no-cors" | "same-origin"
-export interface BaseFetch {
+
+export interface OptionsProps {
+    requiredAuth?: boolean;
+    requiredOtp?: boolean;
+}
+
+export interface AuthOpts {
+    authentication?: Authentication;
+    opts?:OptionsProps;
+}
+export interface BaseFetch extends  AuthOpts {
     method?: Method;
     params?: unknown;
     url: string;
@@ -14,15 +24,21 @@ export interface BaseFetch {
     };
     mode?: RequestMode;
     body?: FormData | JSONTypes;
+   
+} 
+
+export type Authentication ={
+    token?: string;
+    otpToken?: string;
 }
 
-export type OptionsProps = {
+export interface ArgsProps extends AuthOpts {
     contentType: string | "";
     mode?: RequestMode;
     body?: FormData | JSONTypes;
     defaultErr?: string;
     url: string;
-};
+}
 
 export interface FetchProvider {
     // eslint-disable-next-line no-unused-vars

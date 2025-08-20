@@ -1,12 +1,12 @@
 // Example usage of the server-side part of the library
 // Import the server API instance and relevant types
-import { nodeApi, type OptionsProps, type ApiResponse } from "../../src/server"; // Adjust path as needed
+import { nodeApi, type ArgsProps, type ApiResponse } from "../../src/server"; // Adjust path as needed
 
 // eslint-disable-next-line no-console
 console.log("Server example loaded.");
 
 // Example: Configure options for a GET request on the server using a public API
-const getRequestOptions: OptionsProps = {
+const getRequestOptions: ArgsProps = {
     url: "https://jsonplaceholder.typicode.com/todos/1", // Using JSONPlaceholder public API
     contentType: "application/json", // Usually not strictly needed for GET, but good practice
     // body: JSON.stringify({ key: 'server-value', timestamp: Date.now() }), // No body needed for GET

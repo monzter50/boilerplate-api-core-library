@@ -1,10 +1,10 @@
-import { api, type OptionsProps, type ApiResponse } from "../../src/client";
+import { api, type ArgsProps, type ApiResponse } from "../../src/client";
 
 const fetchButton = document.getElementById("fetchButton") as HTMLButtonElement;
 const resultOutput = document.getElementById("resultOutput") as HTMLPreElement;
 
 // Use a public test API (JSONPlaceholder)
-const testApiOptions: OptionsProps = {
+const testApiOptions: ArgsProps = {
     url: "https://jsonplaceholder.typicode.com/posts/1",
     contentType: "application/json",
     defaultErr: "Failed to fetch data from JSONPlaceholder",

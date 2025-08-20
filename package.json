@@ -29,6 +29,7 @@
     "clean": "rm -rf dist",
     "build": "yarn clean && tsup",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .ts",
     "release": "yarn run build && changeset publish",
     "example:server": "tsx examples/server/server-example.ts",
@@ -62,5 +63,11 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "overrides": {
+    "string-width": "^4.2.3"
+  },
+  "resolutions": {
+    "string-width": "^4.2.3"
   }
 }

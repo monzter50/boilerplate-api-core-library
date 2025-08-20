@@ -22,6 +22,68 @@ describe("settings", () => {
         );
     });
 
+    it("should throw ApiError when requiredAuth is true but no token provided", async () => {
+        await expect(settings(mockFetchProvider, {
+            method: "GET",
+            url: "https://api.example.com/posts",
+            opts: {
+                requiredAuth: true
+            }
+        })).rejects.toThrow("Required Token");
+    });
+
+    it("should throw ApiError when requiredOtp is true but no otpToken provided", async () => {
+        await expect(settings(mockFetchProvider, {
+            method: "GET",
+            url: "https://api.example.com/posts",
+            opts: {
+                requiredOtp: true
+            }
+        })).rejects.toThrow("Required Otp Token");
+    });
+
+    it("should pass validation when requiredAuth is true and token is provided", async () => {
+        await settings(mockFetchProvider, {
+            method: "GET",
+            url: "https://api.example.com/posts",
+            opts: {
+                requiredAuth: true
+            },
+            authentication: {
+                token: "token"
+            }
+        });
+
+        expect(mockFetchProvider.fetch).toHaveBeenCalledWith(
+            "https://api.example.com/posts",
+            {
+                method: "GET",
+                headers: { "Content-Type": "application/json" },
+            }
+        );
+    });
+
+    it("should pass validation when requiredOtp is true and otpToken is provided", async () => {
+        await settings(mockFetchProvider, {
+            method: "GET",
+            url: "https://api.example.com/posts",
+            opts: {
+                requiredOtp: true
+            },
+            authentication: {
+                otpToken: "token"
+            }
+        });
+
+        expect(mockFetchProvider.fetch).toHaveBeenCalledWith(
+            "https://api.example.com/posts",
+            {
+                method: "GET",
+                headers: { "Content-Type": "application/json" },
+            }
+        );
+    });
+
     it("should call fetchProvider.fetch with correct parameters for POST request", async () => {
         const body = { title: "Test Post" };
         await settings(mockFetchProvider, {

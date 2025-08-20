@@ -48,15 +48,18 @@ describe("apiCore Client", () => {
         });
         it("should handle errors in POST request", async () => {
             mockSettings.mockRejectedValue(new ApiError("Network error"));
-            const response = await api.post({
+            
+            await expect(api.post({
                 url: "https://api.example.com/posts",
                 body: { title: "Test Post" },
                 contentType: "application/json",
-            });
-            expect(response).toEqual({
-                response: new Error("Network error"),
-                status: "error",
-            });
+            })).rejects.toThrow(ApiError);
+            
+            await expect(api.post({
+                url: "https://api.example.com/posts",
+                body: { title: "Test Post" },
+                contentType: "application/json",
+            })).rejects.toThrow("Network error");
         });
         it("should throw ApiError for non-200/201 status codes", async () => {
             mockSettings.mockResolvedValue({
@@ -70,10 +73,15 @@ describe("apiCore Client", () => {
                     body: { title: "Test Post" },
                     contentType: "application/json",
                 })
-            ).resolves.toEqual({
-                response: new ApiError("Something went wrong posting the data"),
-                status: "error",
-            });
+            ).rejects.toThrow(ApiError);
+            
+            await expect(
+                api.post({
+                    url: "https://api.example.com/posts",
+                    body: { title: "Test Post" },
+                    contentType: "application/json",
+                })
+            ).rejects.toThrow("Something went wrong posting the data");
         });
     });
     describe("get method", () => {
@@ -100,15 +108,15 @@ describe("apiCore Client", () => {
         it("should handle errors in GET request", async () => {
             mockSettings.mockRejectedValue(new ApiError("Network error"));
 
-            const response = await api.get({
+            await expect(api.get({
                 url: "https://api.example.com/posts/1",
                 contentType: "application/json",
-            });
-
-            expect(response).toEqual({
-                response: new ApiError("Network error"),
-                status: "error",
-            });
+            })).rejects.toThrow(ApiError);
+            
+            await expect(api.get({
+                url: "https://api.example.com/posts/1",
+                contentType: "application/json",
+            })).rejects.toThrow("Network error");
         });
         it("should throw ApiError for non-200/201 status codes", async () => {
             mockSettings.mockResolvedValue({
@@ -121,10 +129,14 @@ describe("apiCore Client", () => {
                     url: "https://api.example.com/posts",
                     contentType: "application/json",
                 })
-            ).resolves.toEqual({
-                response: new ApiError("Something went wrong getting the data"),
-                status: "error",
-            });
+            ).rejects.toThrow(ApiError);
+            
+            await expect(
+                api.get({
+                    url: "https://api.example.com/posts",
+                    contentType: "application/json",
+                })
+            ).rejects.toThrow("Something went wrong getting the data");
         });
     });
     describe("delete method", () => {
@@ -149,15 +161,15 @@ describe("apiCore Client", () => {
         it("should handle errors in DELETE request", async () => {
             mockSettings.mockRejectedValue(new Error("Network error"));
 
-            const result = await api.delete({
+            await expect(api.delete({
                 url: "https://api.example.com/posts/1",
                 contentType: "application/json",
-            });
-
-            expect(result).toEqual({
-                response: new Error("Network error"),
-                status: "error",
-            });
+            })).rejects.toThrow(Error);
+            
+            await expect(api.delete({
+                url: "https://api.example.com/posts/1",
+                contentType: "application/json",
+            })).rejects.toThrow("Network error");
         });
         it("should throw ApiError for non-200/201 status codes", async () => {
             mockSettings.mockResolvedValue({
@@ -170,10 +182,14 @@ describe("apiCore Client", () => {
                     url: "https://api.example.com/posts/1",
                     contentType: "application/json",
                 })
-            ).resolves.toEqual({
-                response: new ApiError("Something went wrong deleting the data"),
-                status: "error",
-            });
+            ).rejects.toThrow(ApiError);
+            
+            await expect(
+                api.delete({
+                    url: "https://api.example.com/posts/1",
+                    contentType: "application/json",
+                })
+            ).rejects.toThrow("Something went wrong deleting the data");
         });
     });
     describe("patch method", () => {
@@ -206,16 +222,17 @@ describe("apiCore Client", () => {
         it("should handle errors in PATCH request", async () => {
             mockSettings.mockRejectedValue(new Error("Network error"));
 
-            const result = await api.patch({
+            await expect(api.patch({
                 url: "https://api.example.com/posts/1",
                 body: { title: "Updated Post" },
                 contentType: "application/json",
-            });
-
-            expect(result).toEqual({
-                response: new Error("Network error"),
-                status: "error",
-            });
+            })).rejects.toThrow(Error);
+            
+            await expect(api.patch({
+                url: "https://api.example.com/posts/1",
+                body: { title: "Updated Post" },
+                contentType: "application/json",
+            })).rejects.toThrow("Network error");
         });
         it("should throw ApiError for non-200/201 status codes", async () => {
             mockSettings.mockResolvedValue({
@@ -229,10 +246,15 @@ describe("apiCore Client", () => {
                     body: { title: "Updated Post" },
                     contentType: "application/json",
                 })
-            ).resolves.toEqual({
-                response: new ApiError("Something went wrong patching the data"),
-                status: "error",
-            });
+            ).rejects.toThrow(ApiError);
+            
+            await expect(
+                api.patch({
+                    url: "https://api.example.com/posts/1",
+                    body: { title: "Updated Post" },
+                    contentType: "application/json",
+                })
+            ).rejects.toThrow("Something went wrong patching the data");
         });
     });
 });
