@@ -31,6 +31,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .ts",
+    "version": "changeset version",
     "release": "yarn run build && changeset publish",
     "example:server": "tsx examples/server/server-example.ts",
     "example:client:build": "tsup examples/client/web-example.ts --format iife --out-dir examples/client/dist --no-splitting --global-name webExample --no-dts --clean",
