@@ -1,5 +1,5 @@
 {
-  "name": "@monster-codes/boilerplate-api-core-library",
+  "name": "boilerplate-api-core-library",
   "version": "1.0.0",
   "description": "Only i want practices and understand how create first library for implement my other projects <3",
   "main": "./dist/index.js",
