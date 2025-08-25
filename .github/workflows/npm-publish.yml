@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          publish: pnpm release
+          publish: yarn release
           commit: "ci(release): Version api-core-boilerplate"
           title: "ci(release): Version api-core-boilerplate - template"
 
