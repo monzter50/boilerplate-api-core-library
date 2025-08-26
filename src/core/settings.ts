@@ -18,6 +18,14 @@ export async function settings(fetchProvider:FetchProvider,{
         },
     };
     
+    if (args?.authentication?.token && args?.opts?.requiredAuth) {
+        (options.headers as Record<string, string>)["Authorization"] = `Bearer ${args.authentication.token}`;
+    }
+
+    if (args?.authentication?.otpToken && args?.opts?.requiredOtp) {
+        (options.headers as Record<string, string>)["otp-token"] = args.authentication.otpToken;
+    }
+
     if (method === "POST" || method === "DELETE" || method === "PATCH") {
         options.body = body instanceof FormData ? body : JSON.stringify(body);
     }
