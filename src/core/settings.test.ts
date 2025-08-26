@@ -58,7 +58,10 @@ describe("settings", () => {
             "https://api.example.com/posts",
             {
                 method: "GET",
-                headers: { "Content-Type": "application/json" },
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer token" 
+                },
             }
         );
     });
@@ -79,7 +82,10 @@ describe("settings", () => {
             "https://api.example.com/posts",
             {
                 method: "GET",
-                headers: { "Content-Type": "application/json" },
+                headers: { 
+                    "Content-Type": "application/json",
+                    "otp-token": "token" 
+                },
             }
         );
     });
