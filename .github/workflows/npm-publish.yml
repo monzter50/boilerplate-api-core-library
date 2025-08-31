@@ -8,15 +8,16 @@
 # Alternative: To publish to GitHub Packages instead, change registry-url to:
 # registry-url: 'https://npm.pkg.github.com'
 
-name: CI API Package Template
+name: CI
 
 on:
   push:
     branches:
       - main
   pull_request:
-        branches:
-            - main
+    branches:
+      - main
+    types: [opened]
 
 jobs:
   build:
@@ -27,21 +28,9 @@ jobs:
         with:
           node-version: 20.x
           cache: 'yarn'
-          registry-url: 'https://registry.npmjs.org'
       - run: yarn install
       - run: yarn lint
       - run: yarn test
       - run: yarn build
-
-      - name: Create Release Pull Request
-        id: changesets
-        uses: changesets/action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          publish: yarn release
-          commit: "ci(release): Version api-core-boilerplate"
-          title: "ci(release): Version api-core-boilerplate - template"
 
 
