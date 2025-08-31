@@ -16,13 +16,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: yarn install
       - run: yarn build
-      - name: Create Release Pull Request
-        id: changesets
-        uses: changesets/action@v1
+      - name: Publish to npm
+        run: npm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          publish: yarn release
-          commit: "ci(release): Version api-core-boilerplate"
-          title: "ci(release): Version api-core-boilerplate - template"
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
