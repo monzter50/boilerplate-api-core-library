@@ -141,4 +141,45 @@ describe("settings", () => {
             }
         );
     });
+
+    it("should retry when opts.retry is provided and succeed", async () => {
+        jest.useFakeTimers();
+        const fetchMock = mockFetchProvider.fetch as unknown as jest.Mock;
+        
+        // Fail twice with 500, then succeed with 200
+        fetchMock
+            .mockResolvedValueOnce({ ok: false,
+                status: 500,
+                statusText: "Server Error" } as unknown as Response)
+            .mockResolvedValueOnce({ ok: false,
+                status: 500,
+                statusText: "Server Error" } as unknown as Response)
+            .mockResolvedValueOnce({ ok: true,
+                status: 200,
+                statusText: "OK" } as unknown as Response);
+
+        const promise = settings(mockFetchProvider, {
+            method: "GET",
+            url: "https://api.example.com/retry",
+            opts: {
+                retry: {
+                    maxRetries: 2,
+                    retryDelay: 1,
+                    retryDelayMultiplier: 1,
+                    maxRetryDelay: 5,
+                    retryOnStatus: [ 500 ],
+                    retryOnNetworkError: true,
+                },
+            },
+        });
+
+        // Advance timers for both retries
+        await jest.runOnlyPendingTimersAsync();
+        await jest.runOnlyPendingTimersAsync();
+        await promise;
+
+        expect(fetchMock).toHaveBeenCalledTimes(3);
+
+        jest.useRealTimers();
+    });
 });

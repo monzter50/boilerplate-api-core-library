@@ -26,7 +26,13 @@ export function apiFactory(fetchProvider: FetchProvider) {
                 ...withBody,
             }
         );
+        
+        // Check for successful status codes
         if (response.status !== 200 && response.status !== 201) {
+            // If retry is configured and this is a retryable error, let the retry logic handle it
+            if (args?.opts?.retry) {
+                throw new ApiError(`HTTP ${response.status}: ${response.statusText}`);
+            }
             throw new ApiError(args?.defaultErr ?? `Something went wrong ${action} the data`);
         }
         const result = await response.json();

@@ -6,9 +6,19 @@ export type JSONTypes = JSONArray | JSONObject | Primitive;
 export type Method = "GET" | "POST" | "DELETE" | "PATCH";
 export type RequestMode = "cors" | "navigate" | "no-cors" | "same-origin"
 
+export interface RetryConfig {
+    maxRetries?: number;
+    retryDelay?: number;
+    retryDelayMultiplier?: number;
+    maxRetryDelay?: number;
+    retryOnStatus?: number[];
+    retryOnNetworkError?: boolean;
+}
+
 export interface OptionsProps {
     requiredAuth?: boolean;
     requiredOtp?: boolean;
+    retry?: RetryConfig;
 }
 
 export interface AuthOpts {

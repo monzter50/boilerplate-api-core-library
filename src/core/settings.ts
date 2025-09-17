@@ -1,5 +1,8 @@
 import { FetchProvider,BaseFetch } from "./types";
 import { validationAuth } from "./validationAuth";
+import { withRetry, mergeRetryOptions } from "./retryUtils";
+
+const MIN_ATTEMPTS = 1;
 
 export async function settings(fetchProvider:FetchProvider,{
     method = "GET",
@@ -29,7 +32,21 @@ export async function settings(fetchProvider:FetchProvider,{
     if (method === "POST" || method === "DELETE" || method === "PATCH") {
         options.body = body instanceof FormData ? body : JSON.stringify(body);
     }
-
+    
+    // If retry is configured, use retry logic
+    if (args?.opts?.retry) {
+        const retryOptions = mergeRetryOptions(args.opts.retry);
+        
+        return withRetry(() => fetchProvider.fetch(uri, options),
+            retryOptions,
+            MIN_ATTEMPTS,
+            (attempt, error) => {
+                // Log retry attempts (can be replaced with proper logging)
+                // eslint-disable-next-line no-console
+                console.warn(`Retry attempt ${attempt} for ${method} ${uri}: ${error.message}`);
+            }
+        );
+    }
+    
     return fetchProvider.fetch(uri, options);
-  
 }
