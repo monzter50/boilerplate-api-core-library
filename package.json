@@ -1,5 +1,5 @@
 {
-  "name": "@monster-codes/api-core-library",
+  "name": "boilerplate-api-core-library",
   "version": "1.0.2",
   "description": "A flexible and type-safe HTTP client library for both browser and Node.js environments with built-in retry logic, authentication, and error handling",
   "main": "./dist/index.js",
@@ -37,7 +37,12 @@
     "release": "yarn run build && changeset publish",
     "example:server": "tsx examples/server/server-example.ts",
     "example:client:build": "tsup examples/client/web-example.ts --format iife --out-dir examples/client/dist --no-splitting --global-name webExample --no-dts --clean",
-    "example:client:serve": "http-server examples/client -o -c-1"
+    "example:client:serve": "http-server examples/client -o -c-1",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "size-check": "bundlesize",
+    "precommit": "yarn lint && yarn type-check && yarn test",
+    "prepare": "husky install || true"
   },
   "author": "Monster Codes",
   "keywords": [
@@ -92,5 +97,15 @@
   },
   "resolutions": {
     "string-width": "^4.2.3"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/index.js",
+      "maxSize": "10KB"
+    },
+    {
+      "path": "./dist/index.mjs",
+      "maxSize": "8KB"
+    }
+  ]
 }

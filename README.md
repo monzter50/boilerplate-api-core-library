@@ -1,6 +1,6 @@
-# @monster-codes/api-core-library
+# boilerplate-api-core-library
 
-[![npm version](https://badge.fury.io/js/@monster-codes%2Fapi-core-library.svg)](https://badge.fury.io/js/@monster-codes%2Fapi-core-library)
+[![npm version](https://badge.fury.io/js/boilerplate-api-core-library.svg)](https://badge.fury.io/js/boilerplate-api-core-library)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Test Coverage](https://codecov.io/gh/monzter50/boilerplate-api-core-library/branch/main/graph/badge.svg)](https://codecov.io/gh/monzter50/boilerplate-api-core-library)
@@ -22,13 +22,13 @@ A **flexible** and **type-safe** HTTP client library for both browser and Node.j
 
 ```bash
 # npm
-npm install @monster-codes/api-core-library
+npm install boilerplate-api-core-library
 
 # yarn
-yarn add @monster-codes/api-core-library
+yarn add boilerplate-api-core-library
 
 # pnpm
-pnpm add @monster-codes/api-core-library
+pnpm add boilerplate-api-core-library
 ```
 
 ## 🚀 Quick Start
@@ -36,7 +36,7 @@ pnpm add @monster-codes/api-core-library
 ### Browser Usage
 
 ```typescript
-import { api } from '@monster-codes/api-core-library';
+import { api } from 'boilerplate-api-core-library';
 
 // Simple GET request
 const { response, status } = await api.get<User[]>({
@@ -52,7 +52,7 @@ if (status === 'ok') {
 ### Node.js Usage
 
 ```typescript
-import { nodeApi } from '@monster-codes/api-core-library/server';
+import { nodeApi } from 'boilerplate-api-core-library/server';
 
 // POST request with authentication
 const { response, status } = await nodeApi.post<CreateUserResponse>({
