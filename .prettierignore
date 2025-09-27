@@ -1,0 +1,10 @@
+dist/
+coverage/
+node_modules/
+*.log
+.changeset/
+CHANGELOG.md
+yarn.lock
+package-lock.json
+*.min.js
+*.min.css
