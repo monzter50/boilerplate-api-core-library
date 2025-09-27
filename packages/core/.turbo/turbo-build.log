@@ -1,0 +1,37 @@
+
+[2K[1G[1myarn run v1.22.1[22m
+[2K[1G[2m$ yarn clean && tsup[22m
+[2K[1G[2m$ rm -rf dist[22m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCLI[39m Building entry: src/index.ts, src/client/index.ts, src/server/index.ts
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCLI[39m Using tsconfig: tsconfig.json
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCLI[39m tsup v8.2.4
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCLI[39m Using tsup config: /Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/tsup.config.ts
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCLI[39m Target: node14
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCLI[39m Cleaning output folder
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mESM[39m Build start
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mCJS[39m Build start
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m [1mdist/index.mjs            [22m[32m6.12 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m [1mdist/client/index.mjs     [22m[32m5.90 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m [1mdist/server/index.mjs     [22m[32m5.92 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m [1mdist/server/index.mjs.map [22m[32m12.15 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m [1mdist/client/index.mjs.map [22m[32m12.06 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m [1mdist/index.mjs.map        [22m[32m12.73 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mESM[39m ⚡️ Build success in 20ms
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m [1mdist/server/index.js     [22m[32m6.93 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m [1mdist/client/index.js     [22m[32m6.90 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m [1mdist/index.js            [22m[32m7.13 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m [1mdist/server/index.js.map [22m[32m12.20 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m [1mdist/client/index.js.map [22m[32m12.10 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m [1mdist/index.js.map        [22m[32m12.89 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mCJS[39m ⚡️ Build success in 20ms
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [34mDTS[39m Build start
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m ⚡️ Build success in 751ms
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/index.d.mts          [22m[32m366.00 B[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/client/index.d.mts   [22m[32m623.00 B[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/server/index.d.mts   [22m[32m631.00 B[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/types-A8CnKlIq.d.mts [22m[32m1.56 KB[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/index.d.ts           [22m[32m363.00 B[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/client/index.d.ts    [22m[32m621.00 B[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/server/index.d.ts    [22m[32m629.00 B[39m
+[2m[[22m@MONSTER-CODES/BOILERPLATE-API-CORE-LIBRARY[2m][22m [32mDTS[39m [1mdist/types-A8CnKlIq.d.ts  [22m[32m1.56 KB[39m
+[2K[1G✨  Done in 1.75s.

@@ -1,4 +1,4 @@
-import { settings } from "@/core";
+import { settings } from "../../core";
 
 export const mockResponse = {
     response: {

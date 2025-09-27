@@ -1,4 +1,4 @@
-import { ApiError } from "@/errors/ApiError";
+import { ApiError } from "../errors/ApiError";
 import { Authentication, OptionsProps } from "./types";
 
 export function validationAuth(opts?:OptionsProps, authentication?:Authentication) {

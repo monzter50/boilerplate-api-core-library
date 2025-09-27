@@ -1,46 +1,27 @@
 {
-  "name": "boilerplate-api-core-library",
+  "name": "boilerplate-api-monorepo",
   "version": "1.0.2",
-  "description": "A flexible and type-safe HTTP client library for both browser and Node.js environments with built-in retry logic, authentication, and error handling",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
+  "description": "A monorepo for flexible and type-safe HTTP client library with examples",
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./client": {
-      "types": "./dist/client/index.d.ts",
-      "require": "./dist/client/index.js",
-      "import": "./dist/client/index.mjs"
-    },
-    "./server": {
-      "types": "./dist/server/index.d.ts",
-      "require": "./dist/server/index.js",
-      "import": "./dist/server/index.mjs"
-    }
-  },
+  "packageManager": "yarn@1.22.1",
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "yarn clean && tsup",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "lint": "eslint . --ext .ts",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "test:coverage": "turbo run test:coverage",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --parallel",
     "version": "changeset version",
     "release": "yarn run build && changeset publish",
     "example:server": "tsx examples/server/server-example.ts",
     "example:client:build": "tsup examples/client/web-example.ts --format iife --out-dir examples/client/dist --no-splitting --global-name webExample --no-dts --clean",
     "example:client:serve": "http-server examples/client -o -c-1",
-    "dev": "tsup --watch",
-    "type-check": "tsc --noEmit",
-    "size-check": "bundlesize",
     "precommit": "yarn lint && yarn type-check && yarn test",
     "prepare": "husky install || true"
   },
@@ -77,35 +58,19 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",
-    "@types/jest": "^29.5.13",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
     "eslint": "^8.57.1",
     "http-server": "^14.1.1",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.5",
-    "tsup": "^8.2.4",
     "tsx": "^4.19.4",
     "typescript": "^5.6.2",
-    "prettier": "^3.0.0"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.8"
   },
   "overrides": {
     "string-width": "^4.2.3"
   },
   "resolutions": {
     "string-width": "^4.2.3"
-  },
-  "bundlesize": [
-    {
-      "path": "./dist/index.js",
-      "maxSize": "10KB"
-    },
-    {
-      "path": "./dist/index.mjs",
-      "maxSize": "8KB"
-    }
-  ]
+  }
 }

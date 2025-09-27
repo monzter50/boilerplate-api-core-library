@@ -1,0 +1,621 @@
+
+[2K[1G[1myarn run v1.22.1[22m
+[2K[1G[2m$ jest[22m
+[1m[2mDetermining test suites to run...[22m[22m[999D[K
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  validationAuth
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    when no options or authentication provided
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError with "Required Token" message (8 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    when only options provided without authentication
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when requiredAuth is true and no token provided (9 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when requiredOtp is true and no otpToken provided (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when both requiredAuth and requiredOtp are true and no tokens provided (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    when only authentication provided without options
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when no token provided and no options specified[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when token is 'token' and no options specified[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    when both options and authentication are provided
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when requiredAuth is true but token is 'token'[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when requiredOtp is true but otpToken is 'otp-token'[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when requiredAuth is true but token is not provided (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError when requiredOtp is true but otpToken is not provided[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    successful validation scenarios
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when requiredAuth is true and token is 'token'[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when requiredOtp is true and otpToken is 'otp-token'[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when both requiredAuth and requiredOtp are true and both tokens are true[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when requiredAuth is false and no token provided[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when requiredOtp is false and no otpToken provided[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when both requiredAuth and requiredOtp are false[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when no options specified but token is 'token'[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould not throw when no options specified but otpToken is 'token'[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    edge cases
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle undefined options with valid authentication[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle empty options object with valid authentication[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle undefined authentication with valid options[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  apiCore Client
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould export a function (2 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould return an object with a post method[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    post method
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould return correctly response in simple post   (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle errors in POST request (7 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError for non-200/201 status codes (2 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    get method
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould  return correctly response simple get[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle errors in GET request[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError for non-200/201 status codes (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    delete method
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould return correctly response in simple post  [22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle errors in DELETE request (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError for non-200/201 status codes[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    patch method
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould make a successful PATCH request[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould handle errors in PATCH request (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      [32m✓[39m [2mshould throw ApiError for non-200/201 status codes[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [2m[33mconsole.warn[39m[22m
+[33m    Retry attempt 1 for GET https://api.example.com/retry: HTTP 500: Server Error[39m
+[2m[22m
+[2m    [0m [90m 44 |[39m                 [90m// Log retry attempts (can be replaced with proper logging)[39m[22m
+[2m     [90m 45 |[39m                 [90m// eslint-disable-next-line no-console[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 46 |[39m                 console[33m.[39mwarn([32m`Retry attempt ${attempt} for ${method} ${uri}: ${error.message}`[39m)[33m;[39m[22m
+[2m     [90m    |[39m                         [31m[1m^[22m[2m[39m[22m
+[2m     [90m 47 |[39m             }[22m
+[2m     [90m 48 |[39m         )[33m;[39m[22m
+[2m     [90m 49 |[39m     }[0m[22m
+[2m[22m
+[2m      [2mat [22m[2msrc/core/settings.ts[2m:46:25[22m[2m[22m
+[2m      [2mat withRetry ([22m[2msrc/core/retryUtils.ts[2m:95:13)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mapiCore.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1mvalidationAuth.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m0 of 3 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  [2m[33mconsole.warn[39m[22m
+[33m    Retry attempt 2 for GET https://api.example.com/retry: HTTP 500: Server Error[39m
+[2m[22m
+[2m    [0m [90m 44 |[39m                 [90m// Log retry attempts (can be replaced with proper logging)[39m[22m
+[2m     [90m 45 |[39m                 [90m// eslint-disable-next-line no-console[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 46 |[39m                 console[33m.[39mwarn([32m`Retry attempt ${attempt} for ${method} ${uri}: ${error.message}`[39m)[33m;[39m[22m
+[2m     [90m    |[39m                         [31m[1m^[22m[2m[39m[22m
+[2m     [90m 47 |[39m             }[22m
+[2m     [90m 48 |[39m         )[33m;[39m[22m
+[2m     [90m 49 |[39m     }[0m[22m
+[2m[22m
+[2m      [2mat [22m[2msrc/core/settings.ts[2m:46:25[22m[2m[22m
+[2m      [2mat withRetry ([22m[2msrc/core/retryUtils.ts[2m:95:13)[22m[2m[22m
+
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  settings
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould call fetchProvider.fetch with correct parameters for GET request (3 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould throw ApiError when requiredAuth is true but no token provided (5 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould throw ApiError when requiredOtp is true but no otpToken provided[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould pass validation when requiredAuth is true and token is provided[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould pass validation when requiredOtp is true and otpToken is provided (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould call fetchProvider.fetch with correct parameters for POST request (15 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould use default URL if not provided[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould handle FormData body correctly (1 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    [32m✓[39m [2mshould retry when opts.retry is provided and succeed (22 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2msrc/core/[22m[1msettings.test.ts[22m
+
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 of 3 total
+[1mTests:       [22m[1m[32m43 passed[39m[22m, 43 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K[1mTest Suites: [22m[1m[32m3 passed[39m[22m, 3 total
+[1mTests:       [22m[1m[32m44 passed[39m[22m, 44 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1.896 s
+[2mRan all test suites[22m[2m.[22m
+[2K[1G✨  Done in 4.74s.

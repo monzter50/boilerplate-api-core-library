@@ -1,6 +1,6 @@
 import { ApiResponse, ArgsProps, FetchProvider, Method } from "./types";
-import { settings } from "@/core/settings";
-import { ApiError } from "@/errors/ApiError";
+import { settings } from "./settings";
+import { ApiError } from "../errors/ApiError";
 export function apiFactory(fetchProvider: FetchProvider) {
     async function perform<T>(method: Method, args: ArgsProps, action: string): Promise<ApiResponse<T>> {
 

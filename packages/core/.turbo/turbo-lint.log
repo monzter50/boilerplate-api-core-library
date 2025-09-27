@@ -1,0 +1,78 @@
+
+[2K[1G[1myarn run v1.22.1[22m
+[2K[1G[2m$ eslint . --ext .ts[22m
+=============
+
+WARNING: You are currently running a version of TypeScript which is not officially supported by @typescript-eslint/typescript-estree.
+
+You may find that it works just fine, or you may not.
+
+SUPPORTED TYPESCRIPT VERSIONS: >=4.7.4 <5.6.0
+
+YOUR TYPESCRIPT VERSION: 5.6.2
+
+Please only submit bug reports when using the officially supported version.
+
+=============
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/dist/client/index.d.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): dist/client/index.d.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/dist/index.d.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): dist/index.d.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/dist/server/index.d.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): dist/server/index.d.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/dist/types-A8CnKlIq.d.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): dist/types-A8CnKlIq.d.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/setUpTests.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): setUpTests.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/src/core/advanced-types.ts[24m[0m
+[0m   [2m5:16[22m  [33mwarning[39m  'config' is defined but never used       [2mno-unused-vars[22m[0m
+[0m   [2m6:21[22m  [33mwarning[39m  'error' is defined but never used        [2mno-unused-vars[22m[0m
+[0m  [2m10:17[22m  [33mwarning[39m  'response' is defined but never used     [2mno-unused-vars[22m[0m
+[0m  [2m11:22[22m  [33mwarning[39m  'error' is defined but never used        [2mno-unused-vars[22m[0m
+[0m  [2m30:13[22m  [33mwarning[39m  'apiInstance' is defined but never used  [2mno-unused-vars[22m[0m
+[0m  [2m31:16[22m  [33mwarning[39m  'apiInstance' is defined but never used  [2mno-unused-vars[22m[0m
+[0m  [2m56:16[22m  [33mwarning[39m  'metrics' is defined but never used      [2mno-unused-vars[22m[0m
+[0m  [2m62:20[22m  [33mwarning[39m  'args' is defined but never used         [2mno-unused-vars[22m[0m
+[0m  [2m67:9[22m   [33mwarning[39m  'key' is defined but never used          [2mno-unused-vars[22m[0m
+[0m  [2m68:9[22m   [33mwarning[39m  'key' is defined but never used          [2mno-unused-vars[22m[0m
+[0m  [2m68:22[22m  [33mwarning[39m  'value' is defined but never used        [2mno-unused-vars[22m[0m
+[0m  [2m68:38[22m  [33mwarning[39m  'ttl' is defined but never used          [2mno-unused-vars[22m[0m
+[0m  [2m69:12[22m  [33mwarning[39m  'key' is defined but never used          [2mno-unused-vars[22m[0m
+[0m  [2m77:18[22m  [33mwarning[39m  'retryAfter' is defined but never used   [2mno-unused-vars[22m[0m
+[0m  [2m83:19[22m  [33mwarning[39m  'args' is defined but never used         [2mno-unused-vars[22m[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/src/core/apiCore.test.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): src/core/apiCore.test.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/src/core/retryUtils.ts[24m[0m
+[0m  [2m63:16[22m  [33mwarning[39m  'attempt' is defined but never used  [2mno-unused-vars[22m[0m
+[0m  [2m63:33[22m  [33mwarning[39m  'error' is defined but never used    [2mno-unused-vars[22m[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/src/core/settings.test.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): src/core/settings.test.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/src/core/validationAuth.test.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): src/core/validationAuth.test.ts[0m
+[0m[0m
+[0m[4m/Users/monstercodes/Documents/projects/opensources/boilerplate-api-core-library/packages/core/tsup.config.ts[24m[0m
+[0m  [2m0:0[22m  [31merror[39m  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.[0m
+[0mThe file was not found in any of the provided project(s): tsup.config.ts[0m
+[0m[0m
+[0m[31m[1m✖ 26 problems (9 errors, 17 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+[2K[1G[31merror[39m Command failed with exit code 1.
+[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
