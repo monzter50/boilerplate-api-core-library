@@ -1,4 +1,4 @@
-import { ArgsProps, ApiResponse } from './types';
+import { ArgsProps, ApiResponse } from "./types";
 
 // Request/Response Interceptors
 export interface RequestInterceptor {
@@ -6,7 +6,7 @@ export interface RequestInterceptor {
   onRequestError?: (error: Error) => void | Promise<void>;
 }
 
-export interface ResponseInterceptor<T = any> {
+export interface ResponseInterceptor<T = unknown> {
   onResponse?: (response: ApiResponse<T>) => ApiResponse<T> | Promise<ApiResponse<T>>;
   onResponseError?: (error: Error) => void | Promise<void>;
 }
@@ -27,8 +27,8 @@ export interface CancellationConfig {
 export interface Plugin {
   name: string;
   version?: string;
-  install: (apiInstance: any) => void;
-  uninstall?: (apiInstance: any) => void;
+  install: (apiInstance: unknown) => void;
+  uninstall?: (apiInstance: unknown) => void;
 }
 
 // Enhanced configuration
@@ -60,12 +60,12 @@ export interface PerformanceConfig {
 export interface CacheConfig {
   ttl?: number; // Time to live in milliseconds
   key?: string | ((args: ArgsProps) => string);
-  storage?: 'memory' | 'localStorage' | 'sessionStorage' | CustomCacheStorage;
+  storage?: "memory" | "localStorage" | "sessionStorage" | CustomCacheStorage;
 }
 
 export interface CustomCacheStorage {
-  get: (key: string) => Promise<any> | any;
-  set: (key: string, value: any, ttl?: number) => Promise<void> | void;
+  get: (key: string) => Promise<unknown> | unknown;
+  set: (key: string, value: unknown, ttl?: number) => Promise<void> | void;
   delete: (key: string) => Promise<boolean> | boolean;
   clear: () => Promise<void> | void;
 }
