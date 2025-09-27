@@ -1,146 +1,225 @@
-# @monster-codes/boilerplate-api-core-library
+# @monster-codes/api-core-library
 
-Welcome to the `@monster-codes/boilerplate-api-core-library`! This library provides a boilerplate for creating API core functionalities. We appreciate your interest in contributing to this project. This guide will help you get started with contributing to our library.
+[![npm version](https://badge.fury.io/js/@monster-codes%2Fapi-core-library.svg)](https://badge.fury.io/js/@monster-codes%2Fapi-core-library)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Test Coverage](https://codecov.io/gh/monzter50/boilerplate-api-core-library/branch/main/graph/badge.svg)](https://codecov.io/gh/monzter50/boilerplate-api-core-library)
 
-## Table of Contents
+A **flexible** and **type-safe** HTTP client library for both browser and Node.js environments with built-in retry logic, authentication, and comprehensive error handling.
 
-1. [Getting Started](#getting-started)
-2. [Development Setup](#development-setup)
-3. [Project Structure](#project-structure)
-4. [Making Changes](#making-changes)
-5. [Testing](#testing)
-6. [Running Examples](#running-examples)
-7. [Submitting a Pull Request](#submitting-a-pull-request)
-8. [Code Style](#code-style)
-9. [Reporting Issues](#reporting-issues)
+## ✨ Features
 
-## Getting Started
+- 🌍 **Universal**: Works in both browser and Node.js environments
+- 🔒 **Type-Safe**: Full TypeScript support with comprehensive type definitions
+- 🔄 **Retry Logic**: Configurable retry mechanism with exponential backoff
+- 🔐 **Authentication**: Built-in support for token-based authentication
+- ⚡ **Performance**: Optimized for speed and minimal bundle size
+- 🛡️ **Error Handling**: Comprehensive error handling with custom error types
+- 🎯 **Simple API**: Clean and intuitive API design
+- 📦 **Zero Dependencies**: Minimal production dependencies
 
-First, fork the repository on GitHub and clone your fork locally.
-
-```bash
-git clone https://github.com/[YOUR-USERNAME]/boilerplate-api-core-library.git
-cd boilerplate-api-core-library
-```
-
-## Development Setup
-
-1. Install dependencies:
-   ```bash
-   yarn install
-   ```
-
-2. Build the project:
-   ```bash
-   yarn build
-   ```
-
-3. Run tests:
-   ```bash
-   yarn test
-   ```
-
-## Project Structure
-
-The project is structured as follows:
-
-```
-src/
-├── client/
-│   ├── DomFetchProvider.ts
-│   └── index.ts
-├── server/
-│   ├── NodeFetchProvider.ts
-│   └── index.ts
-├── core/
-│   ├── apiCore.ts
-│   ├── settings.ts
-│   └── types.ts
-└── index.ts
-```
-
-- `client/`: Contains client-side specific code
-- `server/`: Contains server-side specific code
-- `core/`: Contains shared core functionality
-
-## Making Changes
-
-1. Create a new branch for your feature or bugfix:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. Make your changes and commit them:
-   ```bash
-   git commit -m "Description of your changes"
-   ```
-
-3. Push your changes to your fork:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-## Testing
-
-We use Jest for testing. Please ensure that all new features or bug fixes are covered by tests. To run the tests:
+## 📦 Installation
 
 ```bash
-yarn test
+# npm
+npm install @monster-codes/api-core-library
+
+# yarn
+yarn add @monster-codes/api-core-library
+
+# pnpm
+pnpm add @monster-codes/api-core-library
 ```
 
-## Running Examples
+## 🚀 Quick Start
 
-This project includes example implementations for both server-side (Node.js) and client-side (web browser) usage of the library.
+### Browser Usage
 
-### Server Example
+```typescript
+import { api } from '@monster-codes/api-core-library';
 
-To run the server-side example (demonstrates using `nodeApi`):
+// Simple GET request
+const { response, status } = await api.get<User[]>({
+  url: 'https://api.example.com/users',
+  contentType: 'application/json'
+});
+
+if (status === 'ok') {
+  console.log('Users:', response);
+}
+```
+
+### Node.js Usage
+
+```typescript
+import { nodeApi } from '@monster-codes/api-core-library/server';
+
+// POST request with authentication
+const { response, status } = await nodeApi.post<CreateUserResponse>({
+  url: 'https://api.example.com/users',
+  contentType: 'application/json',
+  body: { name: 'John Doe', email: 'john@example.com' },
+  authentication: { token: 'your-auth-token' },
+  opts: {
+    requiredAuth: true,
+    retry: {
+      maxRetries: 3,
+      retryDelay: 1000
+    }
+  }
+});
+```
+
+## 📖 API Reference
+
+### Core Methods
+
+| Method | Description | Parameters |
+|--------|-----------|-----------|
+| `get<T>()` | Perform GET request | `ArgsProps` |
+| `post<T>()` | Perform POST request | `ArgsProps` |
+| `patch<T>()` | Perform PATCH request | `ArgsProps` |
+| `delete<T>()` | Perform DELETE request | `ArgsProps` |
+
+### Configuration Options
+
+```typescript
+interface ArgsProps {
+  url: string;                    // Request URL
+  contentType: string;            // Content type header
+  body?: FormData | JSONTypes;    // Request body
+  mode?: RequestMode;             // CORS mode
+  authentication?: {              // Auth configuration
+    token?: string;
+    otpToken?: string;
+  };
+  opts?: {
+    requiredAuth?: boolean;       // Require authentication
+    requiredOtp?: boolean;        // Require OTP
+    retry?: RetryConfig;          // Retry configuration
+  };
+}
+```
+
+### Retry Configuration
+
+```typescript
+interface RetryConfig {
+  maxRetries?: number;           // Maximum retry attempts (default: 3)
+  retryDelay?: number;           // Initial delay in ms (default: 1000)
+  retryDelayMultiplier?: number; // Backoff multiplier (default: 2)
+  maxRetryDelay?: number;        // Maximum delay in ms (default: 30000)
+  retryOnStatus?: number[];      // HTTP status codes to retry on
+  retryOnNetworkError?: boolean; // Retry on network errors
+}
+```
+
+## 🔧 Advanced Usage
+
+### With Retry Logic
+
+```typescript
+import { api } from '@monster-codes/api-core-library';
+
+const result = await api.get<ApiResponse>({
+  url: 'https://unreliable-api.example.com/data',
+  contentType: 'application/json',
+  opts: {
+    retry: {
+      maxRetries: 5,
+      retryDelay: 1000,
+      retryDelayMultiplier: 2,
+      maxRetryDelay: 10000,
+      retryOnStatus: [408, 429, 500, 502, 503, 504],
+      retryOnNetworkError: true
+    }
+  }
+});
+```
+
+### With Authentication
+
+```typescript
+import { nodeApi } from '@monster-codes/api-core-library/server';
+
+const result = await nodeApi.post<CreateOrderResponse>({
+  url: 'https://api.example.com/orders',
+  contentType: 'application/json',
+  body: {
+    productId: '123',
+    quantity: 2
+  },
+  authentication: {
+    token: process.env.API_TOKEN,
+    otpToken: process.env.OTP_TOKEN
+  },
+  opts: {
+    requiredAuth: true,
+    requiredOtp: true
+  }
+});
+```
+
+## 🎯 Examples
+
+Check out the [`examples`](./examples) directory for complete working examples:
+
+- **[Browser Example](./examples/client/)**: Web application usage with HTML/JS
+- **[Node.js Example](./examples/server/)**: Server-side usage with TypeScript
+
+### Running Examples
 
 ```bash
+# Server example
 yarn example:server
+
+# Client example (builds and serves)
+yarn example:client:build
+yarn example:client:serve
 ```
 
-**Note:** This example uses a placeholder URL (`http://internal-service.local`). You will likely see an `ENOTFOUND` error. To make it work, you'll need to modify `examples/server/server-example.ts` to point to a valid API endpoint.
+## 🧪 Testing
 
-### Client Web Example
+```bash
+# Run tests
+yarn test
 
-To run the client-side web example (demonstrates using `api` in a browser):
+# Run tests with coverage
+yarn test:coverage
 
-1.  **Build the example script:** This bundles the example TypeScript code into a JavaScript file the browser can understand.
-    ```bash
-    yarn example:client:build
-    ```
+# Run linting
+yarn lint
+```
 
-2.  **Serve the example:** This starts a local web server and opens the `index.html` page in your default browser.
-    ```bash
-    yarn example:client:serve
-    ```
+## 📊 Bundle Size
 
-    Once the page loads, click the "Fetch Sample Data" button to see the client library interact with the JSONPlaceholder test API.
+| Environment | Minified | Minified + Gzipped |
+|-------------|----------|-------------------|
+| Browser | ~8KB | ~3KB |
+| Node.js | ~10KB | ~4KB |
 
-## Submitting a Pull Request
+## 🤝 Contributing
 
-1. Ensure your code adheres to the existing style.
-2. Run the test suite and ensure that all tests pass.
-3. Submit a pull request with a clear title and description.
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
 
-## Code Style
+### Development Setup
 
-We use TypeScript and follow these general guidelines:
+1. Fork and clone the repository
+2. Install dependencies: `yarn install`
+3. Run tests: `yarn test`
+4. Build the project: `yarn build`
 
-- Use 4 spaces for indentation
-- Use single quotes for strings
-- Use semicolons at the end of statements
-- Follow the existing code style in the project
+## 📄 License
 
-## Reporting Issues
+MIT © [Monster Codes](https://github.com/monzter50)
 
-If you find a bug or have a suggestion for improvement, please open an issue on the GitHub repository. When reporting issues, please include:
+## 🙏 Acknowledgments
 
-- A clear and descriptive title
-- A detailed description of the issue or suggestion
-- Steps to reproduce the issue (if applicable)
-- Any relevant code snippets or error messages
+- Inspired by modern HTTP client libraries
+- Built with TypeScript and modern JavaScript features
+- Designed for universal usage across environments
 
-Thank you for contributing to `@monster-codes/boilerplate-api-core-library`! 🎉 We appreciate your help in making this boilerplate better for everyone.
+---
+
+**Star ⭐ this repo if you find it helpful!**
 
