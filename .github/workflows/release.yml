@@ -6,17 +6,49 @@ on:
 
 jobs:
   release:
+    name: Release Changed Packages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
         with:
-          node-version: 20.x
+          # Fetch all history for Changesets to work properly
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
           cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install
-      - run: yarn build
-      - name: Publish to npm
-        run: npm publish
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build all packages
+        run: yarn build
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Check which packages changed
+        id: changes
+        run: |
+          echo "changed_packages=$(yarn changeset status --output=json | jq -r '.releases[].name' | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Publish changed packages
+        if: steps.changes.outputs.changed_packages != ''
+        run: |
+          echo "Publishing packages: ${{ steps.changes.outputs.changed_packages }}"
+          yarn changeset publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Summary
+        run: |
+          if [ "${{ steps.changes.outputs.changed_packages }}" != "" ]; then
+            echo "✅ Successfully published: ${{ steps.changes.outputs.changed_packages }}"
+          else
+            echo "ℹ️ No packages to publish"
+          fi
