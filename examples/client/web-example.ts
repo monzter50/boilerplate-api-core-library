@@ -1,4 +1,4 @@
-import { api, type ArgsProps, type ApiResponse } from "../../src/client";
+import { api, type ArgsProps, type ApiResponse } from "boilerplate-api-core-library/client";
 
 const fetchButton = document.getElementById("fetchButton") as HTMLButtonElement;
 const resultOutput = document.getElementById("resultOutput") as HTMLPreElement;

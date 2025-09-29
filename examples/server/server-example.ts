@@ -1,6 +1,6 @@
 // Example usage of the server-side part of the library
 // Import the server API instance and relevant types
-import { nodeApi, type ArgsProps, type ApiResponse } from "../../src/server"; // Adjust path as needed
+import { nodeApi, type ArgsProps, type ApiResponse } from "boilerplate-api-core-library/server";
 
 // eslint-disable-next-line no-console
 console.log("Server example loaded.");
