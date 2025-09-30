@@ -52,8 +52,8 @@ git push
 ### 2. Crear Release en GitHub
 1. Ve a tu repositorio en GitHub
 2. Clic en "Releases" → "Create a new release"
-3. Crea un tag (ej: `v1.0.4`)
-4. Título: "Release v1.0.4"
+3. Crea un tag (ej: `v1.0.3`)
+4. Título: "Release v1.0.3"
 5. Descripción: Lista los cambios principales
 6. ✅ **Publish release**
 
@@ -92,7 +92,7 @@ yarn test
 ```
 packages/
 ├── core/                 # boilerplate-api-core-library
-└── [future-package]/     # [package-name]
+└── [future-package]/     # boilerplate-api-core-library/[package-name]
 ```
 
 ## ✅ Ventajas de este Workflow
