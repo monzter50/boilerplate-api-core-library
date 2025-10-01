@@ -34,10 +34,23 @@ jobs:
       - name: Check which packages changed
         id: changes
         run: |
-          echo "changed_packages=$(yarn changeset status --output=json | jq -r '.releases[].name' | tr '\n' ' ')" >> $GITHUB_OUTPUT
+          # Check if there are any changesets first
+          if [ "$(find .changeset -name '*.md' -not -name 'README.md' | wc -l)" -gt 0 ]; then
+            echo "has_changesets=true" >> $GITHUB_OUTPUT
+            # Try to get changeset status, fallback to simple detection
+            if yarn changeset status --output=json > /tmp/changeset-status.json 2>/dev/null; then
+              PACKAGES=$(cat /tmp/changeset-status.json | jq -r '.releases[].name' 2>/dev/null | tr '\n' ' ' || echo "")
+              echo "changed_packages=$PACKAGES" >> $GITHUB_OUTPUT
+            else
+              echo "changed_packages=boilerplate-api-core-library" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "has_changesets=false" >> $GITHUB_OUTPUT
+            echo "changed_packages=" >> $GITHUB_OUTPUT
+          fi
 
       - name: Publish changed packages
-        if: steps.changes.outputs.changed_packages != ''
+        if: steps.changes.outputs.has_changesets == 'true'
         run: |
           echo "Publishing packages: ${{ steps.changes.outputs.changed_packages }}"
           yarn changeset publish
@@ -47,8 +60,13 @@ jobs:
 
       - name: Summary
         run: |
-          if [ "${{ steps.changes.outputs.changed_packages }}" != "" ]; then
+          if [ "${{ steps.changes.outputs.has_changesets }}" == "true" ]; then
             echo "✅ Successfully published: ${{ steps.changes.outputs.changed_packages }}"
           else
-            echo "ℹ️ No packages to publish"
+            echo "ℹ️ No changesets found - no packages to publish"
+            echo "💡 To publish packages, create a changeset first:"
+            echo "   yarn changeset"
+            echo "   yarn changeset:version"
+            echo "   git commit && git push"
+            echo "   Create GitHub release"
           fi
