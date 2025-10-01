@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 022ab5d: Test workflow for our release
+
+## 1.0.3
+
+### Patch Changes
+
 - Add VERSION constant export for package version tracking
 
 ## 1.0.2

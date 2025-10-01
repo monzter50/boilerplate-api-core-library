@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-api-core-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A flexible and type-safe HTTP client library for both browser and Node.js environments with built-in retry logic, authentication, and error handling",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

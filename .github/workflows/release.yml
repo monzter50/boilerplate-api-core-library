@@ -53,6 +53,10 @@ jobs:
         if: steps.changes.outputs.has_changesets == 'true'
         run: |
           echo "Publishing packages: ${{ steps.changes.outputs.changed_packages }}"
+          echo "Current package versions:"
+          find packages -name package.json -exec echo "📦 {}" \; -exec jq -r '"\(.name): \(.version)"' {} \;
+          echo ""
+          echo "Starting publish process..."
           yarn changeset publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
