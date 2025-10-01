@@ -1,5 +1,13 @@
 # boilerplate-api-core-library
 
+## 1.0.4
+
+### Patch Changes
+
+- [`4bdfbf4`](https://github.com/monzter50/boilerplate-api-core-library/commit/4bdfbf4ae9d07b57ffca1aed1720d6ede8ddd6f2) Thanks [@monzter50](https://github.com/monzter50)! - Test changeset to verify automated workflow and PR creation functionality
+
+- [`50cba20`](https://github.com/monzter50/boilerplate-api-core-library/commit/50cba207e37128c033b16d84dc144e9baa7e4b51) Thanks [@monzter50](https://github.com/monzter50)! - Test automated release workflow
+
 ## 1.0.3
 
 ### Patch Changes
