@@ -1,24 +1,37 @@
-# boilerplate-api-core-library
+# Boilerplate API Core Library - Monorepo
 
 [![npm version](https://badge.fury.io/js/boilerplate-api-core-library.svg)](https://badge.fury.io/js/boilerplate-api-core-library)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Test Coverage](https://codecov.io/gh/monzter50/boilerplate-api-core-library/branch/main/graph/badge.svg)](https://codecov.io/gh/monzter50/boilerplate-api-core-library)
+[![CI](https://github.com/monzter50/boilerplate-api-core-library/workflows/Release/badge.svg)](https://github.com/monzter50/boilerplate-api-core-library/actions)
 
-A **flexible** and **type-safe** HTTP client library for both browser and Node.js environments with built-in retry logic, authentication, and comprehensive error handling.
+A comprehensive monorepo containing HTTP client libraries for modern TypeScript applications. This repository includes packages for both browser and Node.js environments with built-in retry logic, authentication, and comprehensive error handling.
+
+## 📦 Packages
+
+This monorepo contains the following packages:
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| [**boilerplate-api-core-library**](./packages/core) | [![npm](https://img.shields.io/npm/v/boilerplate-api-core-library.svg)](https://npmjs.com/package/boilerplate-api-core-library) | Universal HTTP client library |
 
 ## ✨ Features
 
-- 🌍 **Universal**: Works in both browser and Node.js environments
+- 🏗️ **Monorepo Architecture**: Organized using Yarn workspaces and Turbo
+- 🌍 **Universal Packages**: Works in both browser and Node.js environments
 - 🔒 **Type-Safe**: Full TypeScript support with comprehensive type definitions
 - 🔄 **Retry Logic**: Configurable retry mechanism with exponential backoff
 - 🔐 **Authentication**: Built-in support for token-based authentication
 - ⚡ **Performance**: Optimized for speed and minimal bundle size
 - 🛡️ **Error Handling**: Comprehensive error handling with custom error types
 - 🎯 **Simple API**: Clean and intuitive API design
-- 📦 **Zero Dependencies**: Minimal production dependencies
+- 📦 **Minimal Dependencies**: Optimized production dependencies
+- 🚀 **Automated Releases**: CI/CD with Changesets for version management
 
-## 📦 Installation
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
 # npm
@@ -31,134 +44,39 @@ yarn add boilerplate-api-core-library
 pnpm add boilerplate-api-core-library
 ```
 
-## 🚀 Quick Start
-
-### Browser Usage
+### Basic Usage
 
 ```typescript
-import { api } from 'boilerplate-api-core-library';
+import { api } from 'boilerplate-api-core-library/client';
 
-// Simple GET request
-const { response, status } = await api.get<User[]>({
+// For browser environments
+const { response, status } = await api.get({
   url: 'https://api.example.com/users',
   contentType: 'application/json'
 });
-
-if (status === 'ok') {
-  console.log('Users:', response);
-}
 ```
 
-### Node.js Usage
+For detailed usage examples, see the [Core Package Documentation](./packages/core/README.md).
 
-```typescript
-import { nodeApi } from 'boilerplate-api-core-library/server';
+## 🏗️ Monorepo Structure
 
-// POST request with authentication
-const { response, status } = await nodeApi.post<CreateUserResponse>({
-  url: 'https://api.example.com/users',
-  contentType: 'application/json',
-  body: { name: 'John Doe', email: 'john@example.com' },
-  authentication: { token: 'your-auth-token' },
-  opts: {
-    requiredAuth: true,
-    retry: {
-      maxRetries: 3,
-      retryDelay: 1000
-    }
-  }
-});
 ```
-
-## 📖 API Reference
-
-### Core Methods
-
-| Method | Description | Parameters |
-|--------|-----------|-----------|
-| `get<T>()` | Perform GET request | `ArgsProps` |
-| `post<T>()` | Perform POST request | `ArgsProps` |
-| `patch<T>()` | Perform PATCH request | `ArgsProps` |
-| `delete<T>()` | Perform DELETE request | `ArgsProps` |
-
-### Configuration Options
-
-```typescript
-interface ArgsProps {
-  url: string;                    // Request URL
-  contentType: string;            // Content type header
-  body?: FormData | JSONTypes;    // Request body
-  mode?: RequestMode;             // CORS mode
-  authentication?: {              // Auth configuration
-    token?: string;
-    otpToken?: string;
-  };
-  opts?: {
-    requiredAuth?: boolean;       // Require authentication
-    requiredOtp?: boolean;        // Require OTP
-    retry?: RetryConfig;          // Retry configuration
-  };
-}
-```
-
-### Retry Configuration
-
-```typescript
-interface RetryConfig {
-  maxRetries?: number;           // Maximum retry attempts (default: 3)
-  retryDelay?: number;           // Initial delay in ms (default: 1000)
-  retryDelayMultiplier?: number; // Backoff multiplier (default: 2)
-  maxRetryDelay?: number;        // Maximum delay in ms (default: 30000)
-  retryOnStatus?: number[];      // HTTP status codes to retry on
-  retryOnNetworkError?: boolean; // Retry on network errors
-}
-```
-
-## 🔧 Advanced Usage
-
-### With Retry Logic
-
-```typescript
-import { api } from '@monster-codes/api-core-library';
-
-const result = await api.get<ApiResponse>({
-  url: 'https://unreliable-api.example.com/data',
-  contentType: 'application/json',
-  opts: {
-    retry: {
-      maxRetries: 5,
-      retryDelay: 1000,
-      retryDelayMultiplier: 2,
-      maxRetryDelay: 10000,
-      retryOnStatus: [408, 429, 500, 502, 503, 504],
-      retryOnNetworkError: true
-    }
-  }
-});
-```
-
-### With Authentication
-
-```typescript
-import { nodeApi } from '@monster-codes/api-core-library/server';
-
-const result = await nodeApi.post<CreateOrderResponse>({
-  url: 'https://api.example.com/orders',
-  contentType: 'application/json',
-  body: {
-    productId: '123',
-    quantity: 2
-  },
-  authentication: {
-    token: process.env.API_TOKEN,
-    otpToken: process.env.OTP_TOKEN
-  },
-  opts: {
-    requiredAuth: true,
-    requiredOtp: true
-  }
-});
-```
+├── packages/
+│   └── core/                   # Core HTTP client library
+│       ├── src/
+│       │   ├── client/         # Browser-specific implementations
+│       │   ├── server/         # Node.js-specific implementations
+│       │   ├── core/           # Shared core functionality
+│       │   └── types/          # TypeScript type definitions
+│       └── README.md
+├── examples/
+│   ├── client/                 # Browser usage examples
+│   └── server/                 # Node.js usage examples
+├── .github/
+│   └── workflows/              # CI/CD workflows
+│       ├── release.yml         # Automated releases
+│       └── pull_request_checks.yml  # PR quality checks
+└── docs/                       # Documentation
 
 ## 🎯 Examples
 
@@ -178,25 +96,62 @@ yarn example:client:build
 yarn example:client:serve
 ```
 
-## 🧪 Testing
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js >= 18
+- Yarn >= 1.22.1
+
+### Setup
 
 ```bash
-# Run tests
-yarn test
+# Clone the repository
+git clone https://github.com/monzter50/boilerplate-api-core-library.git
+cd boilerplate-api-core-library
 
-# Run tests with coverage
-yarn test:coverage
+# Install dependencies
+yarn install
 
-# Run linting
-yarn lint
+# Build all packages
+yarn build
 ```
 
-## 📊 Bundle Size
+### Available Scripts
 
-| Environment | Minified | Minified + Gzipped |
-|-------------|----------|-------------------|
-| Browser | ~8KB | ~3KB |
-| Node.js | ~10KB | ~4KB |
+| Command | Description |
+|---------|-------------|
+| `yarn build` | Build all packages |
+| `yarn test` | Run tests for all packages |
+| `yarn test:coverage` | Run tests with coverage |
+| `yarn lint` | Lint all packages |
+| `yarn format` | Format code with Prettier |
+| `yarn type-check` | Run TypeScript type checking |
+| `yarn clean` | Clean build artifacts |
+| `yarn dev` | Development mode with watch |
+
+### Release Process
+
+This monorepo uses [Changesets](https://github.com/changesets/changesets) for version management and automated releases:
+
+```bash
+# 1. Create a changeset for your changes
+yarn changeset
+
+# 2. Version packages (updates CHANGELOG and package.json)
+yarn changeset:version
+
+# 3. Commit and push - CI will handle the release
+git add .
+git commit -m "chore: version packages"
+git push
+```
+
+### CI/CD
+
+- **Pull Requests**: Automated quality checks (tests, linting, type checking)
+- **Main Branch**: Automated releases when changesets are detected
+- **Workflows**: Located in `.github/workflows/`
 
 ## 🤝 Contributing
 
